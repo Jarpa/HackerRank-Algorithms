@@ -2,7 +2,14 @@
 using namespace std;
 
 int height(int n) {
-    return 0;
+	int height = 0;
+	for(int i = 0; i <= n; ++i)
+		if(i%2)
+			height += height;
+		else
+			height += 1;
+
+    return height;
 }
 int main() {
     int T;
@@ -13,3 +20,4 @@ int main() {
         cout << height(n) << endl;
     }
 }
+
